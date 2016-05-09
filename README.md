@@ -1,0 +1,2 @@
+# NZTable
+swift AutoTable
