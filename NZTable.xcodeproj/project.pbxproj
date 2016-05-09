@@ -15,6 +15,9 @@
 		58A176281CE06E5800117988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A176261CE06E5800117988 /* LaunchScreen.storyboard */; };
 		58A176331CE06E5900117988 /* NZTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176321CE06E5900117988 /* NZTableTests.swift */; };
 		58A1763E1CE06E5900117988 /* NZTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1763D1CE06E5900117988 /* NZTableUITests.swift */; };
+		58A176591CE0989300117988 /* NZBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176561CE0989300117988 /* NZBaseItem.swift */; };
+		58A1765A1CE0989300117988 /* NZBaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176571CE0989300117988 /* NZBaseItemView.swift */; };
+		58A1765B1CE0989300117988 /* NZItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176581CE0989300117988 /* NZItemFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		58A176391CE06E5900117988 /* NZTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NZTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A1763D1CE06E5900117988 /* NZTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NZTableUITests.swift; sourceTree = "<group>"; };
 		58A1763F1CE06E5900117988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A176561CE0989300117988 /* NZBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZBaseItem.swift; sourceTree = "<group>"; };
+		58A176571CE0989300117988 /* NZBaseItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZBaseItemView.swift; sourceTree = "<group>"; };
+		58A176581CE0989300117988 /* NZItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZItemFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		58A176191CE06E5800117988 /* NZTable */ = {
 			isa = PBXGroup;
 			children = (
+				58A176561CE0989300117988 /* NZBaseItem.swift */,
+				58A176571CE0989300117988 /* NZBaseItemView.swift */,
+				58A176581CE0989300117988 /* NZItemFactory.swift */,
 				58A1761A1CE06E5800117988 /* AppDelegate.swift */,
 				58A1761C1CE06E5800117988 /* ViewController.swift */,
 				58A1761E1CE06E5800117988 /* Main.storyboard */,
@@ -260,8 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				58A1761D1CE06E5800117988 /* ViewController.swift in Sources */,
+				58A1765A1CE0989300117988 /* NZBaseItemView.swift in Sources */,
+				58A176591CE0989300117988 /* NZBaseItem.swift in Sources */,
 				58A176231CE06E5800117988 /* NZTable.xcdatamodeld in Sources */,
 				58A1761B1CE06E5800117988 /* AppDelegate.swift in Sources */,
+				58A1765B1CE0989300117988 /* NZItemFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +500,7 @@
 				58A176441CE06E5900117988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58A176451CE06E5900117988 /* Build configuration list for PBXNativeTarget "NZTableTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +509,7 @@
 				58A176471CE06E5900117988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58A176481CE06E5900117988 /* Build configuration list for PBXNativeTarget "NZTableUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +518,7 @@
 				58A1764A1CE06E5900117988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
