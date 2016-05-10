@@ -12,16 +12,11 @@ import UIKit
 typealias createItemViewHook = (NZBaseItemView) -> ()
 
 
-class NZItemFacotry: NSObject {
-    private var itemTables: [String: AnyClass]
-    private var createItemHooks: [String: [createItemViewHook]]
+struct NZItemFacotry {
+    private var itemTables: [String: AnyClass] = [:]
+    private var createItemHooks: [String: [createItemViewHook]] = [:]
     
     static let shareInstance = NZItemFacotry()
-    
-    override private init () {
-        itemTables = Dictionary()
-        createItemHooks = Dictionary()
-    }
     
     func getViewTypeCount () {
         itemTables.count
@@ -37,14 +32,14 @@ class NZItemFacotry: NSObject {
         }
         if itemClass is NZBaseItemView.Type {
             let itemView = (itemClass as! NZBaseItemView.Type).init()
-            itemView.item = item
+            itemView.layoutItem = item
             invokeCreateHooks(view: itemView, itemId: id)
-            itemView
+            return itemView
         }
         return nil
     }
     
-    func registCreateHook(createItemHook createViewHook:createItemViewHook, withItemView:String) {
+    mutating func registCreateHook(createItemHook createViewHook:createItemViewHook, withItemView:String) {
         if createItemHooks.keys.contains(withItemView) {
             var hooks:Array = createItemHooks[withItemView]!
             hooks += [createViewHook]
@@ -54,11 +49,11 @@ class NZItemFacotry: NSObject {
         }
     }
     
-    func invokeCreateHooks(view itemView: NZBaseItemView, itemId id: String) {
-        if  !createItemHooks.keys.contains(id) {
-            return
+    func invokeCreateHooks(view itemView: NZBaseItemView, itemId id: String) -> NZBaseItemView {
+        if createItemHooks.keys.contains(id) {
+           createItemHooks[id]?.enumerate().forEach({$1(itemView)})
         }
         
-        createItemHooks[id]?.enumerate().forEach({$1(itemView)})
+        return itemView
     }
 }

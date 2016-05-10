@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class NZBaseItemView: UIView {
-    var item: NZBaseLayoutItem = NZBaseLayoutItem()
+    var layoutItem: NZBaseLayoutItem = NZBaseLayoutItem()
 }
