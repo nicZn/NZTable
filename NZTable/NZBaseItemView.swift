@@ -11,4 +11,13 @@ import UIKit
 
 class NZBaseItemView: UIView {
     var layoutItem: NZBaseLayoutItem = NZBaseLayoutItem()
+    
+    required init(frame: CGRect, item: NZBaseLayoutItem) {
+        super.init(frame: frame)
+        self.layoutItem = item
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

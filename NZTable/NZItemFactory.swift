@@ -31,10 +31,8 @@ struct NZItemFacotry {
             return nil
         }
         if itemClass is NZBaseItemView.Type {
-            let itemView = (itemClass as! NZBaseItemView.Type).init()
-            itemView.layoutItem = item
-            invokeCreateHooks(view: itemView, itemId: id)
-            return itemView
+            let itemView = (itemClass as! NZBaseItemView.Type).init(frame: frame, item: item)
+            return invokeCreateHooks(view: itemView, itemId: id)
         }
         return nil
     }
