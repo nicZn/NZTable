@@ -11,10 +11,9 @@ import UIKit
 
 typealias createItemViewHook = (NZBaseItemView) -> ()
 
-
 struct NZItemFacotry {
-    private var itemTables: [String: AnyClass] = [:]
-    private var createItemHooks: [String: [createItemViewHook]] = [:]
+    private var itemTables = [String: AnyClass]()
+    private var createItemHooks = [String: [createItemViewHook]]()
     
     static let shareInstance = NZItemFacotry()
     
@@ -23,23 +22,33 @@ struct NZItemFacotry {
     }
     
     func createItem(itemId id: String,  withItem item:NZBaseLayoutItem, frame:CGRect)-> NZBaseItemView? {
-        if (!itemTables.keys.contains(id)) {
-            return nil
+        /**
+         if (!itemTables.keys.contains(id)) {
+         return nil
+         }
+         let itemClass:AnyClass = itemTables[id]!
+         if (itemClass is NSNull.Type) {
+         return nil
+         }
+         if itemClass is NZBaseItemView.Type {
+         let itemView = (itemClass as! NZBaseItemView.Type).init(frame: frame, item: item)
+         return invokeCreateHooks(view: itemView, itemId: id)
+         }
+         return nil
+         */
+        guard itemTables.keys.contains(id),
+              let itemClass: AnyObject = itemTables[id]
+              where itemClass is NZBaseItemView.Type else{
+              return nil
         }
-        let itemClass:AnyClass = itemTables[id]!
-        if (itemClass is NSNull.Type) {
-            return nil
-        }
-        if itemClass is NZBaseItemView.Type {
-            let itemView = (itemClass as! NZBaseItemView.Type).init(frame: frame, item: item)
-            return invokeCreateHooks(view: itemView, itemId: id)
-        }
-        return nil
+        
+        let itemView = (itemClass as! NZBaseItemView.Type).init(frame: frame, item: item)
+        return invokeCreateHooks(view: itemView, itemId: id)
     }
     
     mutating func registCreateHook(createItemHook createViewHook:createItemViewHook, withItemView:String) {
         if createItemHooks.keys.contains(withItemView) {
-            var hooks:Array = createItemHooks[withItemView]!
+            var hooks = createItemHooks[withItemView]!
             hooks += [createViewHook]
             createItemHooks.updateValue(hooks, forKey: withItemView)
         } else {
@@ -47,7 +56,7 @@ struct NZItemFacotry {
         }
     }
     
-    func invokeCreateHooks(view itemView: NZBaseItemView, itemId id: String) -> NZBaseItemView {
+    private func invokeCreateHooks(view itemView: NZBaseItemView, itemId id: String) -> NZBaseItemView {
         if createItemHooks.keys.contains(id) {
            createItemHooks[id]?.enumerate().forEach({$1(itemView)})
         }
