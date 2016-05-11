@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class NZBaseItemView: UIView {
-    var layoutItem: NZBaseLayoutItem = NZBaseLayoutItem()
+    var layoutItem: NZBaseLayoutItem?
     
     required init(frame: CGRect, item: NZBaseLayoutItem) {
         super.init(frame: frame)

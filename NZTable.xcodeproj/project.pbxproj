@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5865E2DE1CE300280068A5D8 /* NZModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2DD1CE300280068A5D8 /* NZModule.swift */; };
+		5865E2E41CE330C10068A5D8 /* NZBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E11CE330C10068A5D8 /* NZBaseItem.swift */; };
+		5865E2E51CE330C10068A5D8 /* NZBaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */; };
+		5865E2E61CE330C10068A5D8 /* NZItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */; };
+		5865E2E81CE330CC0068A5D8 /* NZModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E71CE330CC0068A5D8 /* NZModuleManager.swift */; };
 		58A1761B1CE06E5800117988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1761A1CE06E5800117988 /* AppDelegate.swift */; };
 		58A1761D1CE06E5800117988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1761C1CE06E5800117988 /* ViewController.swift */; };
 		58A176201CE06E5800117988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A1761E1CE06E5800117988 /* Main.storyboard */; };
@@ -15,9 +20,6 @@
 		58A176281CE06E5800117988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A176261CE06E5800117988 /* LaunchScreen.storyboard */; };
 		58A176331CE06E5900117988 /* NZTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176321CE06E5900117988 /* NZTableTests.swift */; };
 		58A1763E1CE06E5900117988 /* NZTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1763D1CE06E5900117988 /* NZTableUITests.swift */; };
-		58A176591CE0989300117988 /* NZBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176561CE0989300117988 /* NZBaseItem.swift */; };
-		58A1765A1CE0989300117988 /* NZBaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176571CE0989300117988 /* NZBaseItemView.swift */; };
-		58A1765B1CE0989300117988 /* NZItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A176581CE0989300117988 /* NZItemFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5865E2DD1CE300280068A5D8 /* NZModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZModule.swift; path = Modules/NZModule.swift; sourceTree = "<group>"; };
+		5865E2E11CE330C10068A5D8 /* NZBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZBaseItem.swift; path = Items/NZBaseItem.swift; sourceTree = "<group>"; };
+		5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZBaseItemView.swift; path = Items/NZBaseItemView.swift; sourceTree = "<group>"; };
+		5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZItemFactory.swift; path = Items/NZItemFactory.swift; sourceTree = "<group>"; };
+		5865E2E71CE330CC0068A5D8 /* NZModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZModuleManager.swift; path = Modules/NZModuleManager.swift; sourceTree = "<group>"; };
 		58A176171CE06E5800117988 /* NZTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A1761A1CE06E5800117988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A1761C1CE06E5800117988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,9 +59,6 @@
 		58A176391CE06E5900117988 /* NZTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NZTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A1763D1CE06E5900117988 /* NZTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NZTableUITests.swift; sourceTree = "<group>"; };
 		58A1763F1CE06E5900117988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58A176561CE0989300117988 /* NZBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZBaseItem.swift; sourceTree = "<group>"; };
-		58A176571CE0989300117988 /* NZBaseItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZBaseItemView.swift; sourceTree = "<group>"; };
-		58A176581CE0989300117988 /* NZItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZItemFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5865E2DF1CE306640068A5D8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5865E2E71CE330CC0068A5D8 /* NZModuleManager.swift */,
+				5865E2DD1CE300280068A5D8 /* NZModule.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		5865E2E01CE306710068A5D8 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				5865E2E11CE330C10068A5D8 /* NZBaseItem.swift */,
+				5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */,
+				5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		58A1760E1CE06E5800117988 = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +128,8 @@
 		58A176191CE06E5800117988 /* NZTable */ = {
 			isa = PBXGroup;
 			children = (
-				58A176561CE0989300117988 /* NZBaseItem.swift */,
-				58A176571CE0989300117988 /* NZBaseItemView.swift */,
-				58A176581CE0989300117988 /* NZItemFactory.swift */,
+				5865E2E01CE306710068A5D8 /* Items */,
+				5865E2DF1CE306640068A5D8 /* Modules */,
 				58A1761A1CE06E5800117988 /* AppDelegate.swift */,
 				58A1761C1CE06E5800117988 /* ViewController.swift */,
 				58A1761E1CE06E5800117988 /* Main.storyboard */,
@@ -268,12 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5865E2E41CE330C10068A5D8 /* NZBaseItem.swift in Sources */,
+				5865E2E81CE330CC0068A5D8 /* NZModuleManager.swift in Sources */,
 				58A1761D1CE06E5800117988 /* ViewController.swift in Sources */,
-				58A1765A1CE0989300117988 /* NZBaseItemView.swift in Sources */,
-				58A176591CE0989300117988 /* NZBaseItem.swift in Sources */,
 				58A176231CE06E5800117988 /* NZTable.xcdatamodeld in Sources */,
 				58A1761B1CE06E5800117988 /* AppDelegate.swift in Sources */,
-				58A1765B1CE0989300117988 /* NZItemFactory.swift in Sources */,
+				5865E2E61CE330C10068A5D8 /* NZItemFactory.swift in Sources */,
+				5865E2E51CE330C10068A5D8 /* NZBaseItemView.swift in Sources */,
+				5865E2DE1CE300280068A5D8 /* NZModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
