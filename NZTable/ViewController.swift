@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         var factory = NZItemFactory.shareInstance
         factory.regist(NZBaseItemView.self, key: "base")
-        let item = NSViewItem()
+        let item = NZViewItem()
         let view = factory.createItem(itemId: "base", withItem: item, frame: CGRectMake(0, 0, 12, 12))
         view!.backgroundColor = UIColor.blueColor()
         self.view.addSubview(view!)

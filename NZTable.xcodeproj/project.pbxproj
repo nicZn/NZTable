@@ -12,6 +12,8 @@
 		5865E2E51CE330C10068A5D8 /* NZBaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */; };
 		5865E2E61CE330C10068A5D8 /* NZItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */; };
 		5865E2E81CE330CC0068A5D8 /* NZModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865E2E71CE330CC0068A5D8 /* NZModuleManager.swift */; };
+		5871E9DE1CEAC76800F2C119 /* NZItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871E9DD1CEAC76800F2C119 /* NZItemLabel.swift */; };
+		5871E9E11CEAE1DA00F2C119 /* NZColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871E9E01CEAE1DA00F2C119 /* NZColorManager.swift */; };
 		58A1761B1CE06E5800117988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1761A1CE06E5800117988 /* AppDelegate.swift */; };
 		58A1761D1CE06E5800117988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1761C1CE06E5800117988 /* ViewController.swift */; };
 		58A176201CE06E5800117988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A1761E1CE06E5800117988 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZBaseItemView.swift; path = Items/NZBaseItemView.swift; sourceTree = "<group>"; };
 		5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZItemFactory.swift; path = Items/NZItemFactory.swift; sourceTree = "<group>"; };
 		5865E2E71CE330CC0068A5D8 /* NZModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NZModuleManager.swift; path = Modules/NZModuleManager.swift; sourceTree = "<group>"; };
+		5871E9DD1CEAC76800F2C119 /* NZItemLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZItemLabel.swift; sourceTree = "<group>"; };
+		5871E9E01CEAE1DA00F2C119 /* NZColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NZColorManager.swift; sourceTree = "<group>"; };
 		58A176171CE06E5800117988 /* NZTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A1761A1CE06E5800117988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A1761C1CE06E5800117988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +105,17 @@
 				5865E2E11CE330C10068A5D8 /* NZBaseItem.swift */,
 				5865E2E21CE330C10068A5D8 /* NZBaseItemView.swift */,
 				5865E2E31CE330C10068A5D8 /* NZItemFactory.swift */,
+				5871E9DD1CEAC76800F2C119 /* NZItemLabel.swift */,
 			);
 			name = Items;
+			sourceTree = "<group>";
+		};
+		5871E9DF1CEAE1C500F2C119 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5871E9E01CEAE1DA00F2C119 /* NZColorManager.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		58A1760E1CE06E5800117988 = {
@@ -128,6 +141,7 @@
 		58A176191CE06E5800117988 /* NZTable */ = {
 			isa = PBXGroup;
 			children = (
+				5871E9DF1CEAE1C500F2C119 /* Categories */,
 				5865E2E01CE306710068A5D8 /* Items */,
 				5865E2DF1CE306640068A5D8 /* Modules */,
 				58A1761A1CE06E5800117988 /* AppDelegate.swift */,
@@ -290,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5871E9DE1CEAC76800F2C119 /* NZItemLabel.swift in Sources */,
 				5865E2E41CE330C10068A5D8 /* NZBaseItem.swift in Sources */,
 				5865E2E81CE330CC0068A5D8 /* NZModuleManager.swift in Sources */,
 				58A1761D1CE06E5800117988 /* ViewController.swift in Sources */,
 				58A176231CE06E5800117988 /* NZTable.xcdatamodeld in Sources */,
+				5871E9E11CEAE1DA00F2C119 /* NZColorManager.swift in Sources */,
 				58A1761B1CE06E5800117988 /* AppDelegate.swift in Sources */,
 				5865E2E61CE330C10068A5D8 /* NZItemFactory.swift in Sources */,
 				5865E2E51CE330C10068A5D8 /* NZBaseItemView.swift in Sources */,
