@@ -12,12 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var factory = NZItemFactory.shareInstance
+        factory.regist(NZBaseItemView.self, key: "base")
+        let item = NSViewItem()
+        let view = factory.createItem(itemId: "base", withItem: item, frame: CGRectMake(0, 0, 12, 12))
+        view!.backgroundColor = UIColor.blueColor()
+        self.view.addSubview(view!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
