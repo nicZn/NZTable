@@ -7,8 +7,19 @@
 //
 
 import Foundation
+import UIKit
+
+protocol BaseModuleProtocol {
+    func getViewController(key: String) -> UIViewController
+}
 
 
-struct NZBaseModule {
+struct NZBaseModule: BaseModuleProtocol {
+    var viewControllers = [String: UIViewController]()
+    var storyboards = []
     
+    func getViewController(key: String) -> UIViewController {
+        let viewController = self.viewControllers[key]
+        return viewController! as UIViewController
+    }
 }
